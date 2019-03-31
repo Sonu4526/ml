@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="" ng-controller="myCtrl">
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/table.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- MODAL Popup Links-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<body>
+<h3>Select some text </h3>
+<div ng-mouseup="showSelectedText()">
+Do you think that facebook, twitter, linkedin are designed to make people addict ?, Then you have to read this article. The most popular social networking sites are following people's habit. It is not concept, it is people's habit.<p>The .modal-header class is used to define the style for the header of the modal. The  inside the header has a data-dismiss="modal" attribute which closes the modal if you click on it. The .close class styles the close button, and the .modal-title class styles the header with a proper line-height.</p>
+</div>
+<br/>
+
+<hr>
+<div >
+
+</head>
+<body>
+
+<div class="container">
+<table id="customers">
+  <tr >
+    <th style="text-align: center;">Selected Text</th>
+    <th style="text-align: center;">Choose Entity</th>
+    
+  </tr>
+  <tr>
+    <td style="font-weight: bold;">{{selectedText}}</td>
+    <td><button type="button" class="button button2" data-toggle="modal" data-target="#myModal">Entity</button></td>
+     </tr>
+  <tr>
+    <td></td>
+    <td></td>
+   </tr>
+  <tr>
+    <td></td>
+    <td></td>
+     </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    </tr>
+</table>    
+ <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content" style="padding-left: 20px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">select one entity...</h4>
+        </div>
+        <div class="modal-body" >
+          <p> <input type="checkbox" name="entity" value="Bike"> &nbsp&nbsp This is Apple-1 entity. <span id="demobox1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span></p>
+        </div>
+        <div class="modal-body">
+          <p><input type="checkbox" name="entity" value="Bike"> &nbsp&nbsp This is Apple-2 entity. <span id="demobox2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span></p>
+        </div>
+        <div class="modal-body" >
+          <p><input type="checkbox" name="entity" value="Bike"> &nbsp&nbsp This is Apple-3 entity. <span id="demobox3">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span></p>
+        </div>
+        <div class="modal-footer" >
+          <button type="submit" value="Submit" class="btn btn-default" data-dismiss="modal">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function myCtrl($scope) {
+
+    $scope.showSelectedText = function() {
+        $scope.selectedText =  $scope.getSelectionText();
+    };
+    
+    $scope.getSelectionText = function() {
+      var text = "";
+      if (window.getSelection) {
+          text = window.getSelection().toString();
+      } else if (document.selection && document.selection.type != "Control") {
+          text = document.selection.createRange().text;
+      }
+      return text;
+    };
+}
+</script>
+
+</body>
+</html>

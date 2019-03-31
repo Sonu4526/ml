@@ -1,0 +1,61 @@
+
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  text-align: center;
+  margin-left: 300px;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+.button {
+  background-color: #008CBA; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {padding: 8px 26px;}
+
+                               /* Demobox Style */
+#demobox1 {
+  
+  padding: 2px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color: #8080ff;
+}
+#demobox2 {
+  
+  padding: 2px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color:#ffcc00;
+}
+#demobox3 {
+  
+  padding: 2px;
+  border: 2px solid gray;
+  margin: 0;
+  background-color:#ff4d4d;
+}
